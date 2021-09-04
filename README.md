@@ -33,8 +33,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [@nees101/Frontend Mentor](https://www.frontendmentor.io/solutions/responsive-site-using-css-flex-box-and-javascript-LxaL9D9Vg)
+- Live Site URL: [@nees101/Github]( https://nees101.github.io/Intro-component-with-sign-up-form-challenge-Solution/)
 
 ## My process
 
