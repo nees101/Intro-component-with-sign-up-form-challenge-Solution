@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+
+  <title>Frontend Mentor | Intro component with sign up form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      font-size: 16px;
+      margin: 0;
+      background: url("images/bg-intro-desktop.png") no-repeat;
+      background-size: 100% auto;
+      background-color: hsl(0, 100%, 74%);
+    }
+
+    h1 {
+      color: #fff;
+      font-weight: 700;
+      font-size: 50px;
+      line-height: 1.1;
+    }
+
+    .description {
+      color: #F0F0F0;
+      font-weight:400;
+    }
+
+    .row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 7% 10% ;
+    }
+
+    .column {
+      flex: 50%;
+      margin:1%;
+    }
+
+     .error-message{
+      display:none;
+    }
+     .error .error-message{
+      display:block;
+    }
+
+    .try {
+      box-sizing: border-box;
+      width: 100%;
+      border-style: none;
+      padding: 18px;
+      background-color: hsl(248, 32%, 49%);
+      border-radius: 0.5rem;
+      text-align: center;
+      margin-bottom: 25px;
+      box-shadow: 0 12px 4px -4px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Form Section */
+    form {
+      border-style: none;
+      background-color: #fff;
+      border-radius: 1rem;
+      padding:30px 40px;
+      width:100%;
+      box-sizing: border-box;
+      box-shadow: 0 12px 4px -4px rgba(0, 0, 0, 0.2);
+    }
+
+    .sign-up {
+      font-family: 'Poppins', sans-serif;
+      font-size:16px;
+      font-weight: 600;
+      border: 1px solid hsl(246, 25%, 77%);
+      display: inline-block;
+      margin: 10px 0;
+      padding:18px 30px 18px;
+      width: 100%;
+      border-radius: 0.5rem;
+      box-sizing: border-box;
+      color: hsl(249, 10%, 26%);
+    }
+
+    .sign-up:focus {
+      outline:none;
+      border-color: hsl(249, 10%, 26%);
+    }
+
+    .claim-btn {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1rem;
+      font-weight: 500;
+      width: 100%;
+      background-color: hsl(154, 59%, 51%);
+      color: #F0F0F0;
+      border-style: none;
+      padding:18px;
+      margin: 10px 0;
+      border-radius: 0.5rem;
+      margin-bottom: 10px;
+      box-shadow: inset 0 -10px 0 -6px rgba(0, 0, 0, 0.2);
+    }
+
+    .claim-btn:hover {
+      opacity: 0.7;
+    }
+
+    .terms {
+      font-family: 'Poppins', sans-serif;
+      font-size: 11px;
+      text-align: center;
+      font-weight: 600;
+      opacity: 0.7;
+    }
+
+    .error-message{
+      font-size:11px;
+      font-weight:600;
+      opacity:0.7;
+      color:hsl(0, 100%, 74%);
+      text-align:right;
+      font-style:italic;
+      margin-top:0;
+    }
+    .error-icon{
+      background:url("images/icon-error.svg") no-repeat;
+      background-position:95% 50%;
+      border:2px solid hsl(0, 100%, 74%);
+      opacity:1;
+    }
+    .placeholder-color::placeholder{
+      color:hsl(0, 100%, 74%);
+    }
+
+    /* Attribution Section */
+
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    /* Media Query Section */
+
+    @media(max-width:375px) {
+      body {
+        text-align:center;
+      }
+
+      h1 {
+        font-size: 28px;
+        line-height: 1.5;
+      }
+
+      .row {
+        flex-direction:column;
+        margin:18px;
+      }
+
+      .column {
+        margin-top:50px;
+      }
+
+      .try {
+        padding:18px 50px;
+      }
+      form{
+        padding:18px 25px;;
+      }
+      .sign-up{
+        padding:16px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <div class="row">
+      <div class="column">
+        <h1>Learn to code by watching others</h1>
+        <p class="description">
+          See how experienced developers solve problems in real-time. Watching scripted tutorials is great,
+          but understanding how developers think is invaluable.
+        </p>
+      </div>
+      <div class="column">
+        <p class="try"><span style="color:#F0F0F0"><strong>Try it free 7 days</strong></span><span style="color:#E0E0E0"> then $20/mo. thereafter</span> </p>
+
+        <form method="post" action="index.html" enctype="text/plain" novalidate>
+          <input class="sign-up " type="text" id="firstname" placeholder="First Name"  required>
+          <p id="firstnameError"class ="error-message">First Name cannot be empty </p>
+
+          <input class="sign-up " type="text" id="lastname" placeholder="Last Name" required>
+          <p id="lastnameError"class ="error-message">Last Name cannot be empty </p>
+
+          <input class="sign-up " type="email" id="email" placeholder="Email Address"  required>
+          <p id="emailError"class ="error-message"> Looks like ths is not an email</p>
+
+          <input class="sign-up " type="password" id="password" placeholder="Password" required>
+          <p id="passwordError" class ="error-message">Password cannot be empty </p>
+          <input class="claim-btn" type="submit" value="CLAIM YOUR FREE TRIAL" />
+          <!-- <button class="claim-btn" type="submit">CLAIM YOUR FREE TRIAL</button> -->
+          <p class="terms">
+            <span style="color:hsl(246, 25%, 77%)">By clicking the button, you are agreeing to our</span> <span style="color:hsl(0, 100%, 74%)"><strong>Terms and Services</strong></span>
+          </p>
+        </form>
+
+    </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      &nbsp
+      Coded by <a href="https://www.frontendmentor.io/profile/nees101">Neethu S. Nair</a>.
+    </p>
+  </footer>
+  <script src="index.js" charset="utf-8"></script>
+</body>
+
+</html>
